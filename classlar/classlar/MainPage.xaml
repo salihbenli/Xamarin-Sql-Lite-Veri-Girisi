@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="classlar.MainPage" Title="Cari"
+              x:Name="MPage">
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Icon="refresh.png" Order="Primary" Priority="2" Clicked="onRefresh"></ToolbarItem>
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Padding="5">
+                <Button Text="Kayıt"  Image="add.png" ContentLayout="right" HorizontalOptions="FillAndExpand"  CornerRadius="50"
+                BackgroundColor="Orange" TextColor="Black" Clicked="AddPerson"/>
+                <Label Text="Güncelleme yapmak için listeden seçim yapınız."/>
+                <Label Text="Silme işlemi yapmak için listeye basılı tutun."/>
+          
+            <ListView x:Name="PersonList" HasUnevenRows="True" ItemTapped="EditPerson">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Sil" Clicked="DeletePerson" IsDestructive="true" CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+                                <StackLayout Spacing="2">
+                                    <Label Text="{Binding Name,StringFormat='Name:{0:F0}'}" FontSize="Small" FontAttributes="Bold"/>
+                                    <Label Text="{Binding borc,StringFormat='borc:{0:F0}'}" FontSize="Small" FontAttributes="None"/>
+                                    <Label Text="{Binding verilen,StringFormat='verilen:{0:F0}'}" FontSize="Small" FontAttributes="None"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center"
+                   IsVisible="{Binding Source={x:Reference Mpage}, Path=IsBusy}">
+                <Label Text="Loading Data..." TextColor="Silver" HorizontalOptions="Center"></Label>
+                <ActivityIndicator IsRunning="{Binding Source={x:Reference MPage}, Path=IsBusy}"></ActivityIndicator>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

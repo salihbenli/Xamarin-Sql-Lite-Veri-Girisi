@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="classlar.AddPerson">
+    <ContentPage.Content>
+
+        <StackLayout Padding="5">
+            <Label Text="Name" FontAttributes="Bold" TextColor="Black"/>
+            <Grid ColumnSpacing="-25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Entry Grid.Column="0"  Placeholder="Name" FontSize="Small"  x:Name="name" WidthRequest="325"/>
+                <Button  Grid.Column="2" Image="login.png" Clicked="btn_git" CornerRadius="50"
+                  HorizontalOptions="End" HeightRequest="25"/>
+           </Grid>
+            <Label Text="Borc" FontAttributes="Bold" TextColor="Black"/>
+                <Entry Placeholder="borc" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="borc"
+                   Keyboard="Numeric"/>
+                <Label Text="Verilen" FontAttributes="Bold" TextColor="Black"/>
+                <Entry Placeholder="verilen" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="verilen" 
+                   Keyboard="Numeric"/>
+
+            <Button Text="Güncelle" Image="recycle.png" Clicked="EditPerson" HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="Maroon" TextColor="White" CornerRadius="50"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

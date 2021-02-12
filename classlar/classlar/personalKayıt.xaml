@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="classlar.personalKayıt">
+    <ContentPage.Content>
+        
+            <StackLayout Padding="5">
+                <Label Text="Name" FontAttributes="Bold" TextColor="Black"/>
+                <Entry Placeholder="Name" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="name"/>
+                <Label Text="Borc" FontAttributes="Bold" TextColor="Black"/>
+                <Entry Placeholder="borc" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="borc"
+                   Keyboard="Numeric"/>
+                <Label Text="Verilen" FontAttributes="Bold" TextColor="Black"/>
+                <Entry Placeholder="verilen" FontSize="Small" HorizontalOptions="FillAndExpand" x:Name="verilen" 
+                   Keyboard="Numeric"/>
+
+
+            <Button Text="Kayıt" ContentLayout="right," Image="add.png" WidthRequest="90" Clicked="SavePerson"  
+                     TextColor="White" HorizontalOptions="EndAndExpand" CornerRadius="50" />
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

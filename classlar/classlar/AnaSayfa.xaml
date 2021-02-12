@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="classlar.AnaSayfa">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+            <Label Text="Welcome to Cari!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Cari Ekleme" Clicked="cari_btn" CornerRadius="50"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Cari Bul" ContentLayout="bottom" Image="search.png" Clicked="cari_btn2" CornerRadius="50"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
